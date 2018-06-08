@@ -18,6 +18,6 @@
 
  ![image](https://github.com/weioule/WebViewDemo/blob/master/app/img/img_02.png)
  
- 本次分享，希望能够帮助各位童鞋节省时间精力，也随便记录一波。
+ 好了，本次分享，希望能够帮助各位童鞋节省时间精力，也随便记录一波。
  
  如有修正的地方，欢迎指出！
