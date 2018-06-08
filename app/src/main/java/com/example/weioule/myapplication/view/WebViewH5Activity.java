@@ -101,6 +101,7 @@ public class WebViewH5Activity extends AppCompatActivity {
     }
 
     public boolean netIsAvailable() {
+        //检测网络是否可用
         ConnectivityManager cwjManager = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
         return cwjManager.getActiveNetworkInfo() != null && cwjManager.getActiveNetworkInfo().isAvailable();
     }
@@ -170,7 +171,7 @@ public class WebViewH5Activity extends AppCompatActivity {
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         if (keyCode == KeyEvent.KEYCODE_BACK) {
-            if (webView != null && webView.canGoBack() && !checkBackUrl(blackUrl)) {
+            if (webView != null && webView.canGoBack() && checkBackUrl(blackUrl)) {
                 webView.goBack();
             } else {
                 webView.stopLoading();
@@ -184,12 +185,12 @@ public class WebViewH5Activity extends AppCompatActivity {
 
     private boolean checkBackUrl(String url) {
         WebBackForwardList mWebBackForwardList = webView.copyBackForwardList();
-
         String backUrl = mWebBackForwardList.getItemAtIndex(mWebBackForwardList.getCurrentIndex() - 1).getUrl();
+        //判断是否是空白页
         if (backUrl != null && backUrl.equalsIgnoreCase(url)) {
-            return true;
+            return false;
         }
-        return false;
+        return true;
     }
 
 

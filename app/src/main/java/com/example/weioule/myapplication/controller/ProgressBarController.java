@@ -93,7 +93,7 @@ public class ProgressBarController {
         mPreloadingValue = (int) (Math.random() * 50 + 20);
         currentProgress = 0;
         mListener.start();
-
+        //因为onProgressChanged()返回的进度是从10开始，所以这里就先显示加载1-10的部分
         loadingProgressBarTimer.restartTime(10);
     }
 
