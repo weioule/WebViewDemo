@@ -14,11 +14,7 @@ import com.example.weioule.myapplication.R;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-//    private String url = "https://blog.csdn.net/qq_34584049/article/details/78280815";
-//    private String url = "https://www.12306.cn/";
-    private String url = "https://blog.csdn.net/wol965/article/details/80537920";
-    private String url = "https://pan.baidu.com/s/1uY-n8wyhm4eTSdJ4dQqnmw?qq-pf-to=pcqq.discussion";
-    private String url = "http://xiazai.zol.com.cn/";
+    private String url = "https://github.com/weioule/WebViewDemo";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
